@@ -2,7 +2,6 @@
 "use client"
 import useTradingChart from '@/hooks/useTradingChart';
 import React, { memo } from 'react';
-import { TradingChartProps } from '@/lib/types';
 import { cn } from '@/lib/utils';
 
 function TradingViewWidget({ title, scriptUrl, config, height, className }: TradingChartProps) {
