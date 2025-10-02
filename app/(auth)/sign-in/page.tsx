@@ -1,3 +1,4 @@
+"use client";
 import FooterLink from "@/components/forms/footer-link";
 import InputField from "@/components/forms/input-field";
 import { Button } from "@/components/ui/button";
@@ -23,7 +24,10 @@ export default function SignInPage() {
   const onSubmit = async (data: SignInFormData) => {
     try {
       const result = await signInWithEmail(data);
-      if (result.success) router.push('/');
+      if (result.success) {
+        toast.success("Signed in successfuly.");
+        router.push('/')
+      }
     } catch (e) {
       console.error(e);
       toast.error('Sign in failed', {
